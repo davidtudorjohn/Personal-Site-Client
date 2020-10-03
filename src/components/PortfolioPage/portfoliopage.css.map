@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAC;EACd,UAAU,EAAE,IAAI;CACjB",
+    "sources": [
+        "portfoliopage.scss"
+    ],
+    "names": [],
+    "file": "portfoliopage.css"
+}
