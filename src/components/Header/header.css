@@ -66,14 +66,26 @@ header #nav-list .nav-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
   padding: 0.15rem 0.48rem;
   min-height: 100%;
+}
+
+header #nav-list .nav-item .fa-icon {
+  color: #fefefe;
 }
 
 header #nav-list .nav-item a {
   padding: 0.33rem 0.99rem;
   color: #fefefe;
   font-weight: 700;
+  font-size: 0.88rem;
   border-bottom: solid 2px transparent;
   border-radius: 0.11rem;
 }

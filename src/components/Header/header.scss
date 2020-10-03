@@ -42,12 +42,19 @@ header {
     .nav-item {
       font-family: Helvetica;
       display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       padding: 0.15rem 0.48rem;
       min-height: 100%;
+      .fa-icon {
+        color: #fefefe;
+      }
       a {
         padding: 0.33rem 0.99rem;
         color: #fefefe;
         font-weight: 700;
+        font-size: 0.88rem;
         border-bottom: solid 2px transparent;
         border-radius: 0.11rem;
       }
