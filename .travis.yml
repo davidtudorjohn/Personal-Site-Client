@@ -1,6 +1,7 @@
 language: node_js
 node_js:
   - "3"
-
+services:
+  - docker
 script:
   - docker build .
