@@ -1,9 +1,9 @@
 FROM node:alpine as build-deps
 WORKDIR /client
 COPY package*.json ./
-RUN npm install
+RUN npm install --verbose
 COPY . ./
-RUN npm build
+RUN npm build --verbose
 
 FROM nginx:latest
 COPY --from=build-deps /client/build /usr/share/nginx/html
