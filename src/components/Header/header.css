@@ -34,7 +34,7 @@ header {
   max-height: 4rem;
   top: 0;
   left: 0;
-  background: linear-gradient(160deg, #222, #111);
+  background: linear-gradient(160deg, #38393c, #222);
   -webkit-box-shadow: #38393c 0px 10px 33px 0px;
           box-shadow: #38393c 0px 10px 33px 0px;
   border-bottom: solid 2px var(--primary-color);
@@ -42,8 +42,14 @@ header {
 
 header #logo {
   font-family: Raleway, Helvetica, sans-serif;
-  font-size: 1.66rem;
+  font-size: 0.99rem;
   color: #fefefe;
+}
+
+@media (min-width: 1024px) {
+  header #logo {
+    font-size: 1.22rem;
+  }
 }
 
 header #nav-list {

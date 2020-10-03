@@ -1,3 +1,5 @@
+@import "../../main";
+
 :root {
   --primary-color: limegreen;
 
@@ -25,13 +27,17 @@ header {
   max-height: 4rem;
   top: 0;
   left: 0;
-  background: linear-gradient(160deg, #222, #111);
+  // background: linear-gradient(160deg, #222, #111);
+  background: linear-gradient(160deg, #38393c, #222);
   box-shadow: #38393c 0px 10px 33px 0px;
   border-bottom: solid 2px var(--primary-color);
   #logo {
     font-family: Raleway, Helvetica, sans-serif;
-    font-size: 1.66rem;
+    font-size: 0.99rem;
     color: #fefefe;
+    @include desktop {
+      font-size: 1.22rem;
+    }
   }
   #nav-list {
     display: flex;
