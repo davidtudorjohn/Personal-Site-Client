@@ -7,7 +7,8 @@ form {
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
-  margin: 4rem 2rem;
+  margin: 2rem;
+  padding: 2rem;
   max-width: 500px;
   min-width: 350px;
   max-height: 300px;
@@ -22,6 +23,7 @@ form {
 }
 
 form button {
+  color: #fefefe;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,10 +32,27 @@ form button {
   border: none;
   outline: none;
   padding: 0.66em 3.66em;
-  border-radius: 5em;
+  border-radius: 0.1rem;
 }
 
 form input {
   padding: 0.66rem 0.22rem;
+  background: transparent;
+  outline: none;
+  border: solid 1px #bebebe;
+  border-radius: 0.1rem;
+}
+
+form input:focus {
+  border: solid 1px #4284fb;
+  outline: solid 1px #4284fb;
+}
+
+form input:-internal-autofill-selected {
+  background-color: transparent;
+}
+
+form #login-form-email-input {
+  background: transparent;
 }
 /*# sourceMappingURL=login.css.map */

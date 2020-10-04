@@ -12,7 +12,7 @@ import NavItem from "../NavItem/index";
 const Header = () => {
   return (
     <header>
-      <NavLink to="/">
+      <NavLink activeClassName="active-nav-link" to="/">
         <h1 id="logo">David Tudor John</h1>
       </NavLink>
       <nav>

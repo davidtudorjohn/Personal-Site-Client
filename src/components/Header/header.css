@@ -1,5 +1,5 @@
 :root {
-  --primary-color: limegreen;
+  --primary-color: #4284fb;
   font-size: 16px;
   -webkit-transition: all ease-in-out 0.4s;
   transition: all ease-in-out 0.4s;
@@ -34,9 +34,9 @@ header {
   max-height: 4rem;
   top: 0;
   left: 0;
-  background: #fff;
-  -webkit-box-shadow: #38393c 0rem 0.03rem 2rem 0rem;
-          box-shadow: #38393c 0rem 0.03rem 2rem 0rem;
+  background: #fdfdfd;
+  -webkit-box-shadow: #38393c80 0rem 0.03rem 1rem 0rem;
+          box-shadow: #38393c80 0rem 0.03rem 1rem 0rem;
 }
 
 header #logo {
@@ -69,46 +69,6 @@ header #nav-list {
           align-items: center;
   text-decoration: none;
   list-style: none;
-}
-
-header #nav-list .nav-item {
-  font-family: Helvetica;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-}
-
-header #nav-list .nav-item .fa-icon {
-  color: #444;
-}
-
-header #nav-list .nav-item .active-nav-link,
-header #nav-list .nav-item .active-nav-link > .fa-icon {
-  color: #4284fb;
-}
-
-header #nav-list .nav-item a {
-  min-height: 1rem;
-  padding: 0.33rem 0.99rem;
-  color: #444;
-  font-weight: 700;
-  font-size: 0.88rem;
-  border-bottom: solid 2px transparent;
-  border-radius: 0.11rem;
-}
-
-header #nav-list .nav-item a:hover,
-header #nav-list .nav-item a:hover > .fa-icon {
-  color: #1f6bfa;
-  -webkit-transition: all 0.33s ease;
-  transition: all 0.33s ease;
 }
 
 #spacer {

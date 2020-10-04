@@ -1,8 +1,7 @@
 @import "../../main";
 
 :root {
-  --primary-color: limegreen;
-
+  --primary-color: #4284fb;
   font-size: 16px;
   a,
   button {
@@ -27,10 +26,11 @@ header {
   max-height: 4rem;
   top: 0;
   left: 0;
-  background: #fff;
+  background: #fdfdfd;
   // background: linear-gradient(160deg, #38393c, #222);
-  box-shadow: #38393c 0rem 0.03rem 2rem 0rem;
+  box-shadow: #38393c80 0rem 0.03rem 1rem 0rem;
   // border-bottom: solid 2px var(--primary-color);
+
   #logo {
     font-family: Raleway, Helvetica, sans-serif;
     font-size: 1.22rem;
@@ -50,39 +50,12 @@ header {
     align-items: center;
     text-decoration: none;
     list-style: none;
-    .nav-item {
-      font-family: Helvetica;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      .fa-icon {
-        color: #444;
-      }
-      .active-nav-link,
-      .active-nav-link > .fa-icon {
-        color: #4284fb;
-      }
-      a {
-        min-height: 1rem;
-        padding: 0.33rem 0.99rem;
-        color: #444;
-        font-weight: 700;
-        font-size: 0.88rem;
-        border-bottom: solid 2px transparent;
-        border-radius: 0.11rem;
-        &:hover,
-        &:hover > .fa-icon {
-          color: #1f6bfa;
-          transition: all 0.33s ease;
-        }
-      }
-      // &:hover {
-      //   background-color: #1f6bfa;
-      //   color: #fefefe;
-      //   transition: all 0.33s ease;
-      // }
-    }
+
+    // &:hover {
+    //   background-color: #1f6bfa;
+    //   color: #fefefe;
+    //   transition: all 0.33s ease;
+    // }
   }
 }
 #spacer {

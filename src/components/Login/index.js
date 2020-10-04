@@ -3,8 +3,9 @@ import "./login.css";
 const Login = () => {
   return (
     <form id="login-form">
-      <h2>Login</h2>
-
+      <section>
+        <h2>Login</h2>
+      </section>
       <section>
         <label for="login-form-email-input">Email</label>
         <br />
@@ -25,10 +26,8 @@ const Login = () => {
         </button>
         <br />
       </section>
-
       <section>
         <a href="#">Forgot your password?</a>
-        <br />
       </section>
     </form>
   );

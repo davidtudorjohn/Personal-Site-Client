@@ -1,4 +1,5 @@
 import React from "react";
+import "./navitem.css";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 interface Props {
