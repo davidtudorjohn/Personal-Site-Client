@@ -34,21 +34,21 @@ header {
   max-height: 4rem;
   top: 0;
   left: 0;
-  background: linear-gradient(160deg, #38393c, #222);
+  background: lightgray;
   -webkit-box-shadow: #38393c 0px 10px 33px 0px;
           box-shadow: #38393c 0px 10px 33px 0px;
-  border-bottom: solid 2px var(--primary-color);
 }
 
 header #logo {
   font-family: Raleway, Helvetica, sans-serif;
-  font-size: 0.99rem;
-  color: #fefefe;
+  font-size: 1.22rem;
+  font-weight: 800;
+  color: #333;
 }
 
 @media (min-width: 1024px) {
   header #logo {
-    font-size: 1.22rem;
+    font-size: 1.55rem;
   }
 }
 
@@ -80,26 +80,39 @@ header #nav-list .nav-item {
           justify-content: center;
   text-align: center;
   padding: 0.15rem 0.48rem;
-  min-height: 100%;
 }
 
 header #nav-list .nav-item .fa-icon {
+  color: #444;
+}
+
+header #nav-list .nav-item .fa-icon:hover {
   color: #fefefe;
+  -webkit-transition: all 0.33s ease;
+  transition: all 0.33s ease;
 }
 
 header #nav-list .nav-item a {
+  min-height: 1rem;
   padding: 0.33rem 0.99rem;
-  color: #fefefe;
+  color: #444;
   font-weight: 700;
   font-size: 0.88rem;
   border-bottom: solid 2px transparent;
   border-radius: 0.11rem;
 }
 
-header #nav-list .nav-item:hover {
-  background-color: #38393c;
-  -webkit-transition: all ease-in-out 0.24s;
-  transition: all ease-in-out 0.24s;
+header #nav-list .nav-item a:hover {
+  background-color: #1f6bfa;
+  color: #fefefe;
+  -webkit-transition: all 0.33s ease;
+  transition: all 0.33s ease;
+}
+
+header #nav-list .nav-item a:hover > .fa-icon {
+  color: #fefefe;
+  -webkit-transition: all 0.33s ease;
+  transition: all 0.33s ease;
 }
 
 #spacer {
