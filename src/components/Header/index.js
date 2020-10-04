@@ -1,6 +1,6 @@
 import React from "react";
 import "./header.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCoffee,
@@ -8,29 +8,18 @@ import {
   faBook,
   faFileAlt,
 } from "@fortawesome/free-solid-svg-icons";
+import NavItem from "../NavItem/index";
 const Header = () => {
   return (
     <header>
-      <Link to="/">
+      <NavLink to="/">
         <h1 id="logo">David Tudor John</h1>
-      </Link>
+      </NavLink>
       <nav>
         <ul id="nav-list">
-          <li className="nav-item">
-            <Link to="/portfolio">
-              <FontAwesomeIcon className="fa-icon" icon={faFileAlt} /> Portfolio
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/blog">
-              <FontAwesomeIcon className="fa-icon" icon={faCoffee} /> Blog
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/login">
-              <FontAwesomeIcon className="fa-icon" icon={faSignInAlt} /> Login
-            </Link>
-          </li>
+          <NavItem path="/portfolio" label="Portfolio" icon={faFileAlt} />
+          <NavItem path="/blog" label="Blog" icon={faCoffee} />
+          <NavItem path="/login" label="Login" icon={faSignInAlt} />
         </ul>
       </nav>
     </header>

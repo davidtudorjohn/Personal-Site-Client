@@ -27,9 +27,9 @@ header {
   max-height: 4rem;
   top: 0;
   left: 0;
-  background: lightgray;
+  background: #fff;
   // background: linear-gradient(160deg, #38393c, #222);
-  box-shadow: #38393c 0px 10px 33px 0px;
+  box-shadow: #38393c 0rem 0.03rem 2rem 0rem;
   // border-bottom: solid 2px var(--primary-color);
   #logo {
     font-family: Raleway, Helvetica, sans-serif;
@@ -40,6 +40,9 @@ header {
     @include desktop {
       font-size: 1.55rem;
     }
+  }
+  nav {
+    margin-right: 0;
   }
   #nav-list {
     display: flex;
@@ -53,13 +56,12 @@ header {
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 0.15rem 0.48rem;
       .fa-icon {
         color: #444;
-        &:hover {
-          color: #fefefe;
-          transition: all 0.33s ease;
-        }
+      }
+      .active-nav-link,
+      .active-nav-link > .fa-icon {
+        color: #4284fb;
       }
       a {
         min-height: 1rem;
@@ -69,13 +71,9 @@ header {
         font-size: 0.88rem;
         border-bottom: solid 2px transparent;
         border-radius: 0.11rem;
-        &:hover {
-          background-color: #1f6bfa;
-          color: #fefefe;
-          transition: all 0.33s ease;
-        }
+        &:hover,
         &:hover > .fa-icon {
-          color: #fefefe;
+          color: #1f6bfa;
           transition: all 0.33s ease;
         }
       }

@@ -34,9 +34,9 @@ header {
   max-height: 4rem;
   top: 0;
   left: 0;
-  background: lightgray;
-  -webkit-box-shadow: #38393c 0px 10px 33px 0px;
-          box-shadow: #38393c 0px 10px 33px 0px;
+  background: #fff;
+  -webkit-box-shadow: #38393c 0rem 0.03rem 2rem 0rem;
+          box-shadow: #38393c 0rem 0.03rem 2rem 0rem;
 }
 
 header #logo {
@@ -50,6 +50,10 @@ header #logo {
   header #logo {
     font-size: 1.55rem;
   }
+}
+
+header nav {
+  margin-right: 0;
 }
 
 header #nav-list {
@@ -79,17 +83,15 @@ header #nav-list .nav-item {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  padding: 0.15rem 0.48rem;
 }
 
 header #nav-list .nav-item .fa-icon {
   color: #444;
 }
 
-header #nav-list .nav-item .fa-icon:hover {
-  color: #fefefe;
-  -webkit-transition: all 0.33s ease;
-  transition: all 0.33s ease;
+header #nav-list .nav-item .active-nav-link,
+header #nav-list .nav-item .active-nav-link > .fa-icon {
+  color: #4284fb;
 }
 
 header #nav-list .nav-item a {
@@ -102,15 +104,9 @@ header #nav-list .nav-item a {
   border-radius: 0.11rem;
 }
 
-header #nav-list .nav-item a:hover {
-  background-color: #1f6bfa;
-  color: #fefefe;
-  -webkit-transition: all 0.33s ease;
-  transition: all 0.33s ease;
-}
-
+header #nav-list .nav-item a:hover,
 header #nav-list .nav-item a:hover > .fa-icon {
-  color: #fefefe;
+  color: #1f6bfa;
   -webkit-transition: all 0.33s ease;
   transition: all 0.33s ease;
 }

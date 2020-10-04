@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import PortfolioPage from "./components/PortfolioPage";
 import Login from "./components/Login";
-import BlogPage from "./components/BlogPage";
+import BlogPage from "./components/BlogPage/index";
 function App() {
   return (
     <div className="App">
