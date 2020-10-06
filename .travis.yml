@@ -15,7 +15,7 @@ after_success:
 before_deploy:
   - pip install --user awscli
   - export PATH=$PATH:$HOME/.local/bin
-  - eval $(aws ecr get-login --region us-east-2)
+  - eval $(aws ecr get-login-password --region us-east-2)
   - docker tag personal-site-client:latest 117645150012.dkr.ecr.us-east-2.amazonaws.com/personal-site-client:latest
   - docker push 117645150012.dkr.ecr.us-east-2.amazonaws.com/personal-site-client:latest
 deploy:
