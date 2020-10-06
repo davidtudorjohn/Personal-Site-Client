@@ -19,3 +19,4 @@ deploy:
   on:
     branch: master
 after_deploy:
+  - echo "Deployment was successful!"
