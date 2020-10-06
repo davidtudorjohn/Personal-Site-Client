@@ -4,4 +4,7 @@ node_js:
 services:
   - docker
 script:
-  - docker build .
+  - docker build . -t davidtjohn/personal-site-client:latest
+  - docker run -p 80:80 davidtjohn/personal-site-client:latest
+after_success:
+  - docker push davidtjohn/pesonal-site-client:latest davidtjohn/personal-site-client
