@@ -16,7 +16,7 @@ after_success:
 before_deploy:
 deploy:
   provider: script
-  script:
+  # script:
   on:
     branch: master
 after_deploy:
