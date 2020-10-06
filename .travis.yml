@@ -5,4 +5,3 @@ services:
   - docker
 script:
   - docker build . -t davidtjohn/personal-site-client:latest
-  - docker run -p 80:80 davidtjohn/personal-site-client:latest
