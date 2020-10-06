@@ -15,4 +15,8 @@ after_success:
   - docker push davidtjohn/personal-site-client:latest
 before_deploy:
 deploy:
+  provider: script
+  script:
+  on:
+    branch: master
 after_deploy:
