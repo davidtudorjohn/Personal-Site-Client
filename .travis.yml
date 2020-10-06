@@ -5,4 +5,4 @@ services:
   - docker
 script:
   - docker build . -t davidtjohn/personal-site-client:latest
-  - docker push davidtjohn/personal-site-client:latest davidtjohn/personal-site-client:latest
+  - docker push davidtjohn/personal-site-client:latest
