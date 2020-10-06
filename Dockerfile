@@ -1,8 +1,8 @@
 FROM node:12 as build-deps
 WORKDIR /client
-COPY package*.json .
+COPY package*.json ./
 RUN npm install --verbose
-COPY . .
+COPY . ./
 RUN npm run build --verbose
 
 FROM nginx:latest
