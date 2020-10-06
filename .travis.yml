@@ -10,7 +10,6 @@ script:
   - docker build . -t personal-site-client:latest
 after_success:
   - docker tag personal-site-client:latest davidtjohn/personal-site-client:latest
-  -  #!/bin/bash
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push davidtjohn/personal-site-client:latest
 before_deploy:
