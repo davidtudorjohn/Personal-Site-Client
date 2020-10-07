@@ -1,10 +1,12 @@
-
+:root {
+  font-size: 16px;
+}
 body {
   margin: 0;
-  margin-top: 4rem; /*compensate for fixed header*/
   margin-left: 7vw;
   margin-right: 7vw;
   font-family: Raleway, "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin-top: 64px; /*compensate for fixed header*/
 }
