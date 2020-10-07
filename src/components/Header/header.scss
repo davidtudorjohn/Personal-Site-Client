@@ -19,15 +19,21 @@
 }
 .light {
   --bg-color: #fdfdfd;
+  --bg-color-alt: #ececec;
   --font-color: #404040;
   --font-color-alt: #cccccc;
+  --shadow: var(--font-color) 0rem 0.0033rem 0.99rem 0rem;
+
   transition: color 0.33s ease;
   transition: background-color 0.33s ease;
 }
 .dark {
   --bg-color: #404040;
+  --bg-color-alt: #505050;
   --font-color: #fdfdfd;
   --font-color-alt: #838383;
+  --shadow: var(--font-color) 0rem 0.0033rem 0.99rem 0rem;
+
   transition: color 0.33s ease;
   transition: background-color 0.33s ease;
 }
@@ -52,7 +58,7 @@ header {
   left: 0;
   background: var(--bg-color);
   // background: linear-gradient(160deg, #38393c, #222);
-  box-shadow: var(--font-color) 0rem 0.0033rem 0.99rem 0rem;
+  box-shadow: var(--shadow);
   form {
     display: none;
     @include tablet {
@@ -62,18 +68,19 @@ header {
       display: flex;
     }
     #header-search-btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: var(--font-color-alt);
-      min-width: --icon-bg-size;
-      min-height: --icon-bg-size;
-      max-width: --icon-bg-size;
-      max-height: --icon-bg-size;
-      border-radius: 50%;
-      padding: 0.45rem;
-      margin-left: 0.66rem;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // background-color: var(--font-color-alt);
+      // min-width: --icon-bg-size;
+      // min-height: --icon-bg-size;
+      // max-width: --icon-bg-size;
+      // max-height: --icon-bg-size;
+      // border-radius: 50%;
+      // padding: 0.45rem;
+      // margin-left: 0.66rem;
       border: none;
+      @include iconCircle;
     }
     input {
       background: transparent;
@@ -129,18 +136,19 @@ header {
     align-items: center;
     #theme-btn,
     #mobile-menu-btn {
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      --icon-bg-size: calc(4rem * 0.8);
-      background-color: var(--font-color-alt);
-      min-width: --icon-bg-size;
-      min-height: --icon-bg-size;
-      max-width: --icon-bg-size;
-      max-height: --icon-bg-size;
-      border-radius: 50%;
-      padding: 0.45rem;
+      @include iconCircle // cursor: pointer;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // --icon-bg-size: calc(4rem * 0.8);
+        // background-color: var(--font-color-alt);
+        // min-width: --icon-bg-size;
+        // min-height: --icon-bg-size;
+        // max-width: --icon-bg-size;
+        // max-height: --icon-bg-size;
+        // border-radius: 50%;
+        // padding: 0.45rem;
+;
     }
     #mobile-menu-btn {
       margin-left: 0.66rem;
@@ -150,9 +158,9 @@ header {
       }
     }
   }
-
   #mobile-menu-content {
     margin: 0;
+    padding: 0;
     display: flex;
     width: 350px;
     flex-direction: column;
@@ -163,11 +171,12 @@ header {
     right: 7vw;
     background-color: var(--bg-color);
     border-radius: 0.11em;
+    box-shadow: var(--shadow);
     @include desktop {
       display: none;
     }
     #mobile-nav-list {
-      margin-left: 0;
+      margin: 0 auto;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -179,7 +188,7 @@ header {
       .nav-item {
         justify-content: left;
         &:hover {
-          background-color: yellow;
+          background-color: var(--bg-color-alt);
         }
         width: 100%;
       }

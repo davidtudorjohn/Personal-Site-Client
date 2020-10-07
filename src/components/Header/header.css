@@ -17,8 +17,10 @@
 
 .light {
   --bg-color: #fdfdfd;
+  --bg-color-alt: #ececec;
   --font-color: #404040;
   --font-color-alt: #cccccc;
+  --shadow: var(--font-color) 0rem 0.0033rem 0.99rem 0rem;
   -webkit-transition: color 0.33s ease;
   transition: color 0.33s ease;
   -webkit-transition: background-color 0.33s ease;
@@ -27,8 +29,10 @@
 
 .dark {
   --bg-color: #404040;
+  --bg-color-alt: #505050;
   --font-color: #fdfdfd;
   --font-color-alt: #838383;
+  --shadow: var(--font-color) 0rem 0.0033rem 0.99rem 0rem;
   -webkit-transition: color 0.33s ease;
   transition: color 0.33s ease;
   -webkit-transition: background-color 0.33s ease;
@@ -65,8 +69,8 @@ header {
   top: 0;
   left: 0;
   background: var(--bg-color);
-  -webkit-box-shadow: var(--font-color) 0rem 0.0033rem 0.99rem 0rem;
-          box-shadow: var(--font-color) 0rem 0.0033rem 0.99rem 0rem;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
 }
 
 header form {
@@ -90,6 +94,8 @@ header form {
 }
 
 header form #header-search-btn {
+  border: none;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,15 +105,16 @@ header form #header-search-btn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  --icon-bg-size: calc(4rem * 0.8);
   background-color: var(--font-color-alt);
+  height: --icon-bg-size;
+  width: --icon-bg-size;
   min-width: --icon-bg-size;
   min-height: --icon-bg-size;
   max-width: --icon-bg-size;
   max-height: --icon-bg-size;
   border-radius: 50%;
   padding: 0.45rem;
-  margin-left: 0.66rem;
-  border: none;
 }
 
 header form input {
@@ -210,6 +217,8 @@ header #header-btn-section #mobile-menu-btn {
           align-items: center;
   --icon-bg-size: calc(4rem * 0.8);
   background-color: var(--font-color-alt);
+  height: --icon-bg-size;
+  width: --icon-bg-size;
   min-width: --icon-bg-size;
   min-height: --icon-bg-size;
   max-width: --icon-bg-size;
@@ -230,6 +239,7 @@ header #header-btn-section #mobile-menu-btn {
 
 header #mobile-menu-content {
   margin: 0;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,6 +259,8 @@ header #mobile-menu-content {
   right: 7vw;
   background-color: var(--bg-color);
   border-radius: 0.11em;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
 }
 
 @media (min-width: 1024px) {
@@ -258,7 +270,7 @@ header #mobile-menu-content {
 }
 
 header #mobile-menu-content #mobile-nav-list {
-  margin-left: 0;
+  margin: 0 auto;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -285,7 +297,7 @@ header #mobile-menu-content #mobile-nav-list .nav-item {
 }
 
 header #mobile-menu-content #mobile-nav-list .nav-item:hover {
-  background-color: yellow;
+  background-color: var(--bg-color-alt);
 }
 
 header #mobile-menu-content #mobile-nav-list > a {

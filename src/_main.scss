@@ -5,9 +5,24 @@ $desktop-width: 1024px;
     @content;
   }
 }
-
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
     @content;
   }
+}
+@mixin iconCircle {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --icon-bg-size: calc(4rem * 0.8);
+  background-color: var(--font-color-alt);
+  height: --icon-bg-size;
+  width: --icon-bg-size;
+  min-width: --icon-bg-size;
+  min-height: --icon-bg-size;
+  max-width: --icon-bg-size;
+  max-height: --icon-bg-size;
+  border-radius: 50%;
+  padding: 0.45rem;
 }

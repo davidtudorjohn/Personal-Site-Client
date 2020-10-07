@@ -12,10 +12,11 @@ import {
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import NavItem from "../NavItem/index";
+import MobileNavItem from "../MobileNavItem";
 const Header = () => {
   const bodyClass = document.body.classList;
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   useEffect(() => {
     let darkModePref = localStorage.getItem("isDarkMode");
     console.log("dark mode pref:" + darkModePref);
@@ -33,6 +34,9 @@ const Header = () => {
       bodyClass.replace("dark", "light");
       localStorage.setItem("isDarkMode", false);
     }
+  };
+  const handleMobileMenuClick = () => {
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -80,9 +84,24 @@ const Header = () => {
       {isMobileMenuOpen && (
         <section id="mobile-menu-content">
           <ul id="mobile-nav-list">
-            <NavItem path="/portfolio" label="Portfolio" icon={faFileAlt} />
-            <NavItem path="/blog" label="Blog" icon={faCoffee} />
-            <NavItem path="/login" label="Login" icon={faSignInAlt} />
+            <MobileNavItem
+              path="/portfolio"
+              label="Portfolio"
+              icon={faFileAlt}
+              click={handleMobileMenuClick}
+            />
+            <MobileNavItem
+              path="/blog"
+              label="Blog"
+              icon={faCoffee}
+              click={handleMobileMenuClick}
+            />
+            <MobileNavItem
+              path="/login"
+              label="Login"
+              icon={faSignInAlt}
+              click={handleMobileMenuClick}
+            />
           </ul>
         </section>
       )}
