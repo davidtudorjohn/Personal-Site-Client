@@ -21,7 +21,7 @@ const Login = () => {
       </section>
 
       <section>
-        <button type="submit" for="login-form">
+        <button id="login-form-btn" type="submit" for="login-form">
           Login
         </button>
         <br />

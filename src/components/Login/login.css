@@ -1,4 +1,4 @@
-form {
+#login-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7,7 +7,7 @@ form {
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
-  margin: 2rem;
+  margin-top: 2rem;
   padding: 2rem;
   max-width: 500px;
   min-width: 350px;
@@ -22,7 +22,28 @@ form {
   border: solid 1px #ccc;
 }
 
-form button {
+#login-form input {
+  padding: 0.66rem 0.22rem;
+  background: transparent;
+  outline: none;
+  border: solid 1px #bebebe;
+  border-radius: 0.1rem;
+}
+
+#login-form input:focus {
+  border: solid 1px #4284fb;
+  outline: solid 1px #4284fb;
+}
+
+#login-form input:-internal-autofill-selected {
+  background-color: transparent;
+}
+
+#login-form #login-form-email-input {
+  background: transparent;
+}
+
+#login-form #login-form-btn {
   color: #fefefe;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -33,26 +54,5 @@ form button {
   outline: none;
   padding: 0.66em 3.66em;
   border-radius: 0.1rem;
-}
-
-form input {
-  padding: 0.66rem 0.22rem;
-  background: transparent;
-  outline: none;
-  border: solid 1px #bebebe;
-  border-radius: 0.1rem;
-}
-
-form input:focus {
-  border: solid 1px #4284fb;
-  outline: solid 1px #4284fb;
-}
-
-form input:-internal-autofill-selected {
-  background-color: transparent;
-}
-
-form #login-form-email-input {
-  background: transparent;
 }
 /*# sourceMappingURL=login.css.map */

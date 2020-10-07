@@ -8,5 +8,5 @@ body {
   font-family: Raleway, "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-top: 64px; /*compensate for fixed header*/
+  margin-top: calc(4rem + 0.99rem); /*compensate for fixed header*/
 }

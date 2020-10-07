@@ -1,9 +1,8 @@
-form {
+#login-form {
   display: flex;
   flex-direction: column;
   position: absolute;
-  // margin-top: 100px;
-  margin: 2rem;
+  margin-top: 2rem;
   padding: 2rem;
   max-width: 500px;
   min-width: 350px;
@@ -12,16 +11,7 @@ form {
   justify-content: space-evenly;
   align-items: center;
   border: solid 1px #ccc;
-  button {
-    color: #fefefe;
-    display: flex;
-    position: relative;
-    background-color: var(--primary-color);
-    border: none;
-    outline: none;
-    padding: 0.66em 3.66em;
-    border-radius: 0.1rem;
-  }
+
   input {
     padding: 0.66rem 0.22rem;
     background: transparent;
@@ -39,5 +29,15 @@ form {
   }
   #login-form-email-input {
     background: transparent;
+  }
+  #login-form-btn {
+    color: #fefefe;
+    display: flex;
+    position: relative;
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    padding: 0.66em 3.66em;
+    border-radius: 0.1rem;
   }
 }

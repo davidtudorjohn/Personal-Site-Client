@@ -1,28 +1,33 @@
 @import "../../main";
 
 :root {
-  --primary-color: #4284fb;
-  --bg-color-light: #fdfdfd;
-  --bg-color-dark: #404040;
   font-size: 16px;
-  transition: all 0.33s ease;
+  --icon-bg-size: calc(4rem * 0.8);
+  --header-height: 4rem;
+  --primary-color: #4284fb;
+
   a,
   button {
+    // border: none;
     text-decoration: none;
     cursor: pointer;
     font-weight: 700;
     letter-spacing: -0.033rem;
     color: var(--font-color);
   }
-  transition: all ease-in-out 0.4s;
+  // transition: all ease-in-out 0.4s;
 }
 .light {
   --bg-color: #fdfdfd;
   --font-color: #404040;
+  --font-color-alt: #cccccc;
+  transition: all 0.33s ease;
 }
 .dark {
   --bg-color: #404040;
   --font-color: #fdfdfd;
+  --font-color-alt: #838383;
+  transition: all 0.33s ease;
 }
 body {
   color: var(--font-color);
@@ -37,26 +42,63 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 86vw;
-  // min-width: 100vw;
-  // max-width: 100vw;
+
   position: fixed;
-  height: 4rem;
-  min-height: 4rem;
-  max-height: 4rem;
+  height: --header-height;
+  min-height: --header-height;
+  max-height: --header-height;
   top: 0;
   left: 0;
   background: var(--bg-color);
   // background: linear-gradient(160deg, #38393c, #222);
   box-shadow: var(--font-color) 0rem 0.0033rem 0.99rem 0rem;
+  form {
+    display: none;
+    @include tablet {
+      display: flex;
+    }
+    @include desktop {
+      display: flex;
+    }
+    #header-search-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--font-color-alt);
+      min-width: --icon-bg-size;
+      min-height: --icon-bg-size;
+      max-width: --icon-bg-size;
+      max-height: --icon-bg-size;
+      border-radius: 50%;
+      padding: 0.45rem;
+      margin-left: 0.66rem;
+      border: none;
+    }
+    input {
+      background: transparent;
+      outline: none;
+      border: solid 1px #bebebe;
+      border-radius: 0.1rem;
+      &:focus {
+        border: solid 1px #4284fb;
 
-  // border-bottom: solid 2px var(--primary-color);
-
+        outline: solid 1px #4284fb;
+      }
+    }
+    input:-internal-autofill-selected {
+      background-color: transparent;
+    }
+    #header-search-input {
+      padding: 0.11rem 0.33rem;
+      background: transparent;
+    }
+  }
   #logo {
     font-family: Raleway, Helvetica, sans-serif;
     font-size: 1.22rem;
     font-weight: 800;
     color: var(--font-color);
-
+    padding-right: 2rem;
     @include desktop {
       font-size: 1.55rem;
     }
@@ -67,22 +109,32 @@ header {
     flex-direction: row;
     align-items: center;
     #nav-list {
-      display: flex;
       flex-direction: row;
       align-items: center;
       text-decoration: none;
       list-style: none;
+      display: none;
 
-      // &:hover {
-      //   background-color: #1f6bfa;
-      //   color: #fefefe;
-      //   transition: all 0.33s ease;
-      // }
+      @include desktop {
+        display: flex;
+      }
     }
   }
-  #theme-btn {
+  #theme-btn-bg {
+    #theme-btn {
+      cursor: pointer;
+    }
     cursor: pointer;
-    // position: absolute;
-    // right: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --icon-bg-size: calc(4rem * 0.8);
+    background-color: var(--font-color-alt);
+    min-width: --icon-bg-size;
+    min-height: --icon-bg-size;
+    max-width: --icon-bg-size;
+    max-height: --icon-bg-size;
+    border-radius: 50%;
+    padding: 0.45rem;
   }
 }
