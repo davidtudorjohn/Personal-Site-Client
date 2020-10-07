@@ -8,7 +8,7 @@
 
   a,
   button {
-    // border: none;
+    border: none;
     text-decoration: none;
     cursor: pointer;
     font-weight: 700;
@@ -21,13 +21,15 @@
   --bg-color: #fdfdfd;
   --font-color: #404040;
   --font-color-alt: #cccccc;
-  transition: all 0.33s ease;
+  transition: color 0.33s ease;
+  transition: background-color 0.33s ease;
 }
 .dark {
   --bg-color: #404040;
   --font-color: #fdfdfd;
   --font-color-alt: #838383;
-  transition: all 0.33s ease;
+  transition: color 0.33s ease;
+  transition: background-color 0.33s ease;
 }
 body {
   color: var(--font-color);
@@ -42,11 +44,10 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 86vw;
-
   position: fixed;
-  height: --header-height;
-  min-height: --header-height;
-  max-height: --header-height;
+  height: var(--header-height);
+  min-height: var(--header-height);
+  max-height: var(--header-height);
   top: 0;
   left: 0;
   background: var(--bg-color);
@@ -120,21 +121,71 @@ header {
       }
     }
   }
-  #theme-btn-bg {
-    #theme-btn {
-      cursor: pointer;
-    }
-    cursor: pointer;
+
+  #header-btn-section {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    --icon-bg-size: calc(4rem * 0.8);
-    background-color: var(--font-color-alt);
-    min-width: --icon-bg-size;
-    min-height: --icon-bg-size;
-    max-width: --icon-bg-size;
-    max-height: --icon-bg-size;
-    border-radius: 50%;
-    padding: 0.45rem;
+    #theme-btn,
+    #mobile-menu-btn {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      --icon-bg-size: calc(4rem * 0.8);
+      background-color: var(--font-color-alt);
+      min-width: --icon-bg-size;
+      min-height: --icon-bg-size;
+      max-width: --icon-bg-size;
+      max-height: --icon-bg-size;
+      border-radius: 50%;
+      padding: 0.45rem;
+    }
+    #mobile-menu-btn {
+      margin-left: 0.66rem;
+
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+
+  #mobile-menu-content {
+    margin: 0;
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: calc(var(--header-height) - 2px);
+    right: 7vw;
+    background-color: var(--bg-color);
+    border-radius: 0.11em;
+    @include desktop {
+      display: none;
+    }
+    #mobile-nav-list {
+      margin-left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: center;
+      height: 100%;
+      padding: 0;
+
+      .nav-item {
+        justify-content: left;
+        &:hover {
+          background-color: yellow;
+        }
+        width: 100%;
+      }
+    }
+    #mobile-nav-list > a {
+      text-align: left;
+    }
   }
 }

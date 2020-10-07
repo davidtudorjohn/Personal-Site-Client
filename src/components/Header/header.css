@@ -7,6 +7,7 @@
 
 :root a,
 :root button {
+  border: none;
   text-decoration: none;
   cursor: pointer;
   font-weight: 700;
@@ -18,16 +19,20 @@
   --bg-color: #fdfdfd;
   --font-color: #404040;
   --font-color-alt: #cccccc;
-  -webkit-transition: all 0.33s ease;
-  transition: all 0.33s ease;
+  -webkit-transition: color 0.33s ease;
+  transition: color 0.33s ease;
+  -webkit-transition: background-color 0.33s ease;
+  transition: background-color 0.33s ease;
 }
 
 .dark {
   --bg-color: #404040;
   --font-color: #fdfdfd;
   --font-color-alt: #838383;
-  -webkit-transition: all 0.33s ease;
-  transition: all 0.33s ease;
+  -webkit-transition: color 0.33s ease;
+  transition: color 0.33s ease;
+  -webkit-transition: background-color 0.33s ease;
+  transition: background-color 0.33s ease;
 }
 
 body {
@@ -54,9 +59,9 @@ header {
           justify-content: space-between;
   width: 86vw;
   position: fixed;
-  height: --header-height;
-  min-height: --header-height;
-  max-height: --header-height;
+  height: var(--header-height);
+  min-height: var(--header-height);
+  max-height: var(--header-height);
   top: 0;
   left: 0;
   background: var(--bg-color);
@@ -175,7 +180,24 @@ header nav #nav-list {
   }
 }
 
-header #theme-btn-bg {
+header #header-btn-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #header-btn-section #theme-btn,
+header #header-btn-section #mobile-menu-btn {
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -196,7 +218,77 @@ header #theme-btn-bg {
   padding: 0.45rem;
 }
 
-header #theme-btn-bg #theme-btn {
-  cursor: pointer;
+header #header-btn-section #mobile-menu-btn {
+  margin-left: 0.66rem;
+}
+
+@media (min-width: 1024px) {
+  header #header-btn-section #mobile-menu-btn {
+    display: none;
+  }
+}
+
+header #mobile-menu-content {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 350px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: calc(var(--header-height) - 2px);
+  right: 7vw;
+  background-color: var(--bg-color);
+  border-radius: 0.11em;
+}
+
+@media (min-width: 1024px) {
+  header #mobile-menu-content {
+    display: none;
+  }
+}
+
+header #mobile-menu-content #mobile-nav-list {
+  margin-left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  padding: 0;
+}
+
+header #mobile-menu-content #mobile-nav-list .nav-item {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  width: 100%;
+}
+
+header #mobile-menu-content #mobile-nav-list .nav-item:hover {
+  background-color: yellow;
+}
+
+header #mobile-menu-content #mobile-nav-list > a {
+  text-align: left;
 }
 /*# sourceMappingURL=header.css.map */
