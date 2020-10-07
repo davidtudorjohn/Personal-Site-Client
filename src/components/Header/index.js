@@ -13,6 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import NavItem from "../NavItem/index";
 import MobileNavItem from "../MobileNavItem";
+import HeaderSearchForm from "../HeaderSearchForm";
 const Header = () => {
   const bodyClass = document.body.classList;
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -45,12 +46,13 @@ const Header = () => {
         <NavLink activeClassName="active-nav-link" to="/">
           <h1 id="logo">David Tudor John</h1>
         </NavLink>
-        <form id="header-search-form">
+        {/* <form id="header-search-form">
           <input type="text" id="header-search-input" />
           <button id="header-search-btn">
             <FontAwesomeIcon icon={faSearch} />
           </button>
-        </form>
+        </form> */}
+        <HeaderSearchForm icon={<FontAwesomeIcon icon={faSearch} />} />
         <ul id="nav-list">
           <NavItem path="/portfolio" label="Portfolio" icon={faFileAlt} />
           <NavItem path="/blog" label="Blog" icon={faCoffee} />

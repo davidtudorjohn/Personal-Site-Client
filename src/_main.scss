@@ -26,3 +26,23 @@ $desktop-width: 1024px;
   border-radius: 50%;
   padding: 0.45rem;
 }
+.light {
+  --bg-color: #fdfdfd;
+  --bg-color-alt: #ececec;
+  --font-color: #404040;
+  --font-color-alt: #cccccc;
+  --shadow: var(--font-color) 0rem 0.0033rem 0.99rem 0rem;
+
+  transition: color 0.33s ease;
+  transition: background-color 0.33s ease;
+}
+.dark {
+  --bg-color: #404040;
+  --bg-color-alt: #505050;
+  --font-color: #fdfdfd;
+  --font-color-alt: #838383;
+  --shadow: var(--font-color) 0rem 0.0033rem 0.99rem 0rem;
+
+  transition: color 0.33s ease;
+  transition: background-color 0.33s ease;
+}

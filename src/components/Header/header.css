@@ -1,20 +1,3 @@
-:root {
-  font-size: 16px;
-  --icon-bg-size: calc(4rem * 0.8);
-  --header-height: 4rem;
-  --primary-color: #4284fb;
-}
-
-:root a,
-:root button {
-  border: none;
-  text-decoration: none;
-  cursor: pointer;
-  font-weight: 700;
-  letter-spacing: -0.033rem;
-  color: var(--font-color);
-}
-
 .light {
   --bg-color: #fdfdfd;
   --bg-color-alt: #ececec;
@@ -37,6 +20,23 @@
   transition: color 0.33s ease;
   -webkit-transition: background-color 0.33s ease;
   transition: background-color 0.33s ease;
+}
+
+:root {
+  font-size: 16px;
+  --icon-bg-size: calc(4rem * 0.8);
+  --header-height: 4rem;
+  --primary-color: #4284fb;
+}
+
+:root a,
+:root button {
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: -0.033rem;
+  color: var(--font-color);
 }
 
 body {
@@ -71,71 +71,6 @@ header {
   background: var(--bg-color);
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
-}
-
-header form {
-  display: none;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  header form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-@media (min-width: 1024px) {
-  header form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-header form #header-search-btn {
-  border: none;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  --icon-bg-size: calc(4rem * 0.8);
-  background-color: var(--font-color-alt);
-  height: --icon-bg-size;
-  width: --icon-bg-size;
-  min-width: --icon-bg-size;
-  min-height: --icon-bg-size;
-  max-width: --icon-bg-size;
-  max-height: --icon-bg-size;
-  border-radius: 50%;
-  padding: 0.45rem;
-}
-
-header form input {
-  background: transparent;
-  outline: none;
-  border: solid 1px #bebebe;
-  border-radius: 0.1rem;
-}
-
-header form input:focus {
-  border: solid 1px #4284fb;
-  outline: solid 1px #4284fb;
-}
-
-header form input:-internal-autofill-selected {
-  background-color: transparent;
-}
-
-header form #header-search-input {
-  padding: 0.11rem 0.33rem;
-  background: transparent;
 }
 
 header #logo {

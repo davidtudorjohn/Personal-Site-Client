@@ -17,26 +17,7 @@
   }
   // transition: all ease-in-out 0.4s;
 }
-.light {
-  --bg-color: #fdfdfd;
-  --bg-color-alt: #ececec;
-  --font-color: #404040;
-  --font-color-alt: #cccccc;
-  --shadow: var(--font-color) 0rem 0.0033rem 0.99rem 0rem;
 
-  transition: color 0.33s ease;
-  transition: background-color 0.33s ease;
-}
-.dark {
-  --bg-color: #404040;
-  --bg-color-alt: #505050;
-  --font-color: #fdfdfd;
-  --font-color-alt: #838383;
-  --shadow: var(--font-color) 0rem 0.0033rem 0.99rem 0rem;
-
-  transition: color 0.33s ease;
-  transition: background-color 0.33s ease;
-}
 body {
   color: var(--font-color);
   background-color: var(--bg-color);
@@ -59,48 +40,7 @@ header {
   background: var(--bg-color);
   // background: linear-gradient(160deg, #38393c, #222);
   box-shadow: var(--shadow);
-  form {
-    display: none;
-    @include tablet {
-      display: flex;
-    }
-    @include desktop {
-      display: flex;
-    }
-    #header-search-btn {
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
-      // background-color: var(--font-color-alt);
-      // min-width: --icon-bg-size;
-      // min-height: --icon-bg-size;
-      // max-width: --icon-bg-size;
-      // max-height: --icon-bg-size;
-      // border-radius: 50%;
-      // padding: 0.45rem;
-      // margin-left: 0.66rem;
-      border: none;
-      @include iconCircle;
-    }
-    input {
-      background: transparent;
-      outline: none;
-      border: solid 1px #bebebe;
-      border-radius: 0.1rem;
-      &:focus {
-        border: solid 1px #4284fb;
 
-        outline: solid 1px #4284fb;
-      }
-    }
-    input:-internal-autofill-selected {
-      background-color: transparent;
-    }
-    #header-search-input {
-      padding: 0.11rem 0.33rem;
-      background: transparent;
-    }
-  }
   #logo {
     font-family: Raleway, Helvetica, sans-serif;
     font-size: 1.22rem;
