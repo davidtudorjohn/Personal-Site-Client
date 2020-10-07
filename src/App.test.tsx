@@ -4,6 +4,6 @@ import App from "./App";
 
 test("renders portfolio link", () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/portfolio/i);
-  expect(linkElement).toBeInTheDocument();
+  const logoElement = getByText(/david tudor john/i);
+  expect(logoElement).toBeInTheDocument();
 });
