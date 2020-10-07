@@ -35,6 +35,7 @@ body {
 }
 
 header {
+  z-index: 9999;
   padding: 0vh 7vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,9 +47,10 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
-  min-width: 100vw;
-  max-width: 100vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 86vw;
   position: fixed;
   height: 4rem;
   min-height: 4rem;
@@ -56,8 +58,8 @@ header {
   top: 0;
   left: 0;
   background: var(--bg-color);
-  -webkit-box-shadow: #38393c80 0rem 0.03rem 1rem 0rem;
-          box-shadow: #38393c80 0rem 0.03rem 1rem 0rem;
+  -webkit-box-shadow: var(--font-color) 0rem 0.0033rem 0.99rem 0rem;
+          box-shadow: var(--font-color) 0rem 0.0033rem 0.99rem 0rem;
 }
 
 header #logo {
@@ -75,9 +77,19 @@ header #logo {
 
 header nav {
   margin-right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-header #nav-list {
+header nav #nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,14 +104,7 @@ header #nav-list {
   list-style: none;
 }
 
-#spacer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  top: 0;
-  min-height: 70px;
-  max-height: 70px;
-  width: 100vw;
+header #theme-btn {
+  cursor: pointer;
 }
 /*# sourceMappingURL=header.css.map */

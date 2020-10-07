@@ -7,6 +7,7 @@ import {
   faSignInAlt,
   faMoon,
   faFileAlt,
+  faSun,
 } from "@fortawesome/free-solid-svg-icons";
 import NavItem from "../NavItem/index";
 const Header = () => {
@@ -22,26 +23,24 @@ const Header = () => {
   };
   return (
     <header>
-      <NavLink activeClassName="active-nav-link" to="/">
-        <h1 id="logo">David Tudor John</h1>
-      </NavLink>
       <nav>
+        <NavLink activeClassName="active-nav-link" to="/">
+          <h1 id="logo">David Tudor John</h1>
+        </NavLink>
         <ul id="nav-list">
           <NavItem path="/portfolio" label="Portfolio" icon={faFileAlt} />
           <NavItem path="/blog" label="Blog" icon={faCoffee} />
           <NavItem path="/login" label="Login" icon={faSignInAlt} />
-          <li className="nav-item">
-            <FontAwesomeIcon
-              id="theme-btn"
-              onClick={(e) => {
-                e.preventDefault();
-                toggleDarkMode();
-              }}
-              icon={faMoon}
-            />
-          </li>
         </ul>
       </nav>
+      <FontAwesomeIcon
+        id="theme-btn"
+        onClick={(e) => {
+          e.preventDefault();
+          toggleDarkMode();
+        }}
+        icon={isDarkMode ? faSun : faMoon}
+      />
     </header>
   );
 };
