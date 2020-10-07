@@ -1,0 +1,104 @@
+.mobile-nav-item {
+  font-family: Helvetica;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.mobile-nav-item:hover {
+  background-color: var(--bg-color-alt);
+  -webkit-transition: background-color 0.33s ease;
+  transition: background-color 0.33s ease;
+}
+
+.mobile-nav-item .mobile-nav-item-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobile-nav-item .mobile-nav-item-content p {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.mobile-nav-item .mobile-nav-item-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobile-nav-item .mobile-nav-item-right {
+  text-align: left;
+  padding-left: 0.66rem;
+  display: block;
+}
+
+.mobile-nav-item .fa-icon {
+  color: var(--font-color);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  --icon-bg-size: calc(4rem * 0.8);
+  background-color: var(--font-color-alt);
+  height: --icon-bg-size;
+  width: --icon-bg-size;
+  min-width: --icon-bg-size;
+  min-height: --icon-bg-size;
+  max-width: --icon-bg-size;
+  max-height: --icon-bg-size;
+  border-radius: 50%;
+  padding: 0.45rem;
+}
+
+.mobile-nav-item .active-nav-link,
+.mobile-nav-item .active-nav-link > .fa-icon {
+  color: #4284fb;
+}
+
+.mobile-nav-item a {
+  min-height: 1rem;
+  padding: 0.33rem 0.99rem;
+  color: var(--font-color);
+  font-weight: 700;
+  font-size: 0.88rem;
+  border-bottom: solid 2px transparent;
+  border-radius: 0.11rem;
+}
+
+.mobile-nav-item a:hover,
+.mobile-nav-item a:hover > .fa-icon {
+  color: #1f6bfa;
+  -webkit-transition: all 0.33s ease;
+  transition: all 0.33s ease;
+}
+/*# sourceMappingURL=mobilenavitem.css.map */
