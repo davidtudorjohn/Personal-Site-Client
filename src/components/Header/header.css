@@ -1,6 +1,10 @@
 :root {
   --primary-color: #4284fb;
+  --bg-color-light: #fdfdfd;
+  --bg-color-dark: #404040;
   font-size: 16px;
+  -webkit-transition: all 0.33s ease;
+  transition: all 0.33s ease;
   -webkit-transition: all ease-in-out 0.4s;
   transition: all ease-in-out 0.4s;
 }
@@ -11,6 +15,23 @@
   cursor: pointer;
   font-weight: 700;
   letter-spacing: -0.033rem;
+  color: var(--font-color);
+}
+
+.light {
+  --bg-color: #fdfdfd;
+  --font-color: #404040;
+}
+
+.dark {
+  --bg-color: #404040;
+  --font-color: #fdfdfd;
+}
+
+body {
+  color: var(--font-color);
+  background-color: var(--bg-color);
+  min-height: 100vh;
 }
 
 header {
@@ -34,7 +55,7 @@ header {
   max-height: 4rem;
   top: 0;
   left: 0;
-  background: #fdfdfd;
+  background: var(--bg-color);
   -webkit-box-shadow: #38393c80 0rem 0.03rem 1rem 0rem;
           box-shadow: #38393c80 0rem 0.03rem 1rem 0rem;
 }
@@ -43,7 +64,7 @@ header #logo {
   font-family: Raleway, Helvetica, sans-serif;
   font-size: 1.22rem;
   font-weight: 800;
-  color: #333;
+  color: var(--font-color);
 }
 
 @media (min-width: 1024px) {

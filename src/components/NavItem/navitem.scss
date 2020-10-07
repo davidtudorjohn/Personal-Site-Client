@@ -6,7 +6,7 @@
   text-align: center;
 
   .fa-icon {
-    color: #333;
+    color: var(--font-color);
   }
   .icon-background {
     background-color: #ddd;
@@ -26,7 +26,7 @@
   a {
     min-height: 1rem;
     padding: 0.33rem 0.99rem;
-    color: #333;
+    color: var(--font-color);
     font-weight: 700;
     font-size: 0.88rem;
     border-bottom: solid 2px transparent;

@@ -13,7 +13,7 @@
 }
 
 .nav-item .fa-icon {
-  color: #333;
+  color: var(--font-color);
 }
 
 .nav-item .icon-background {
@@ -36,7 +36,7 @@
 .nav-item a {
   min-height: 1rem;
   padding: 0.33rem 0.99rem;
-  color: #333;
+  color: var(--font-color);
   font-weight: 700;
   font-size: 0.88rem;
   border-bottom: solid 2px transparent;
