@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import BlogNav from "../BlogNav";
 import BlogPost from "../BlogPost";
 import Loader from "../Loader";
 import blogData from "./blogData";
@@ -21,6 +22,7 @@ const BlogPage = () => {
   ) : (
     <>
       <h1>Blog</h1>
+      <BlogNav />
       <div id="blog-page">
         <br />
         {blogData.map((post) => {
