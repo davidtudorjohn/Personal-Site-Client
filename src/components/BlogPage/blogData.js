@@ -4,6 +4,7 @@ const blogData = [
     author: "David John",
     postedAt: "October 7, 2020 at 7:13 p.m.",
     title: "Idea to money: How do you start a successful startup?",
+    tags: ["Wordpress", "Innovation"],
     body:
       "You try over and over again. You try over and over again. You try over and over again. You try over and over again. You try over and over again. You try over and over again.",
     image:
@@ -14,6 +15,7 @@ const blogData = [
     author: "David John",
     postedAt: "October 7, 2020 at 7:13 p.m.",
     title: "Make more money: How do you start a successful startup?",
+    tags: ["Startups", "Bootstrapping"],
     body:
       "You need to make more money. You try over and over again. You try over and over again. You try over and over again. You try over and over again. You try over and over again.",
     image:
@@ -24,6 +26,7 @@ const blogData = [
     author: "David John",
     postedAt: "October 7, 2020 at 7:13 p.m.",
     title: "Product-Market Fit",
+    tags: ["MVP", "Iterations"],
     body:
       "You need Product-Market Fit. You try over and over again. You try over and over again. You try over and over again. You try over and over again. You try over and over again.",
     image:
@@ -34,6 +37,7 @@ const blogData = [
     author: "David John",
     postedAt: "October 7, 2020 at 7:13 p.m.",
     title: "Start coding to greatly increase your starups chance at success.",
+    tags: ["ReatcJS", "JavaScript"],
     body:
       "You need Product-Market Fit. You try over and over again. You try over and over again. You try over and over again. You try over and over again. You try over and over again.",
     image:

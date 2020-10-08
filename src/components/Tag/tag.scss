@@ -1,0 +1,12 @@
+@import "../../main";
+.post-tag {
+  margin-right: 0.33rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: -0.0033rem;
+  border: solid 2px limegreen;
+  border-radius: 5em;
+  padding: 0.22rem 0.33rem;
+  //   background: limegreen;
+  color: var(--font-color);
+}

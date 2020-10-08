@@ -61,15 +61,14 @@
   }
 }
 
-#blog-page {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.post-tag {
+  margin-right: 0.33rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: -0.0033rem;
+  border: solid 2px limegreen;
+  border-radius: 5em;
+  padding: 0.22rem 0.33rem;
+  color: var(--font-color);
 }
-/*# sourceMappingURL=blogpage.css.map */
+/*# sourceMappingURL=tag.css.map */

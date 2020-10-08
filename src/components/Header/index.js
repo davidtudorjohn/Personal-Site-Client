@@ -18,6 +18,7 @@ const Header = () => {
   const bodyClass = document.body.classList;
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [query, setQuery] = useState("");
   useEffect(() => {
     let darkModePref = localStorage.getItem("isDarkMode");
     console.log("dark mode pref:" + darkModePref);

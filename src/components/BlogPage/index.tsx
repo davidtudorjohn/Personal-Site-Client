@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import BlogPost from "../BlogPost";
+import Loader from "../Loader";
 import blogData from "./blogData";
 import "./blogpage.css";
 const BlogPage = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const handleBlogClick = () => {
     return;
   };
-  return (
+  const fetchBlogPosts = async () => {
+    await null;
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+    return;
+  };
+  fetchBlogPosts();
+  return isLoading ? (
+    <Loader />
+  ) : (
     <>
       <h1>Blog</h1>
       <div id="blog-page">
@@ -18,6 +30,7 @@ const BlogPage = () => {
               author={post.author}
               postedAt={post.postedAt}
               title={post.title}
+              tags={post.tags}
               body={post.body}
               image={post.image}
             />

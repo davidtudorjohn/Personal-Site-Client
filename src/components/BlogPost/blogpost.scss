@@ -6,17 +6,31 @@
   max-width: 86vw;
   @include tablet {
     margin: 1rem;
-    max-width: 24vw;
+    max-width: 33vw;
   }
   @include desktop {
     margin: 1rem;
-    max-width: 19vw;
+    max-width: 36vw;
   }
   .blog-post-content {
     padding: 1rem;
+    .tags-section {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+    }
   }
   h6 {
     padding-inline-start: 0;
+    font-weight: 300;
+    letter-spacing: normal;
+  }
+  .blog-post-body {
+    font-size: 0.88rem;
+    font-weight: 400;
+    line-height: 1.33rem;
   }
   .blog-post-image {
     height: auto;
@@ -26,6 +40,7 @@
   }
   .blog-post-details {
     color: var(--font-color);
+    font-weight: 500;
   }
   &:hover {
     border: solid 1px var(--font-color-alt);
