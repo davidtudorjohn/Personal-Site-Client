@@ -40,7 +40,6 @@
 }
 
 .blog-post {
-  padding: 2rem;
   margin: 1rem 0rem;
   border: solid 1px var(--bg-color-alt);
   border-radius: 0.11rem;
@@ -59,6 +58,10 @@
     margin: 1rem;
     max-width: 19vw;
   }
+}
+
+.blog-post .blog-post-content {
+  padding: 2rem;
 }
 
 .blog-post h6 {
