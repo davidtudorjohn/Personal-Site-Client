@@ -19,22 +19,22 @@ const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [query, setQuery] = useState("");
-  useEffect(() => {
-    let darkModePref = localStorage.getItem("isDarkMode");
-    console.log("dark mode pref:" + darkModePref);
-    if (darkModePref === true) {
-      // bodyClass.replace("light", "dark");
+  // useEffect(() => {
+  //   let darkModePref = localStorage.getItem("isDarkMode");
+  //   console.log("dark mode pref:" + darkModePref);
+  //   if (darkModePref === true) {
+  //     // bodyClass.replace("light", "dark");
 
-      setIsDarkMode(true);
-    }
-  }, []);
+  //     setIsDarkMode(true);
+  //   }
+  // }, []);
   const toggleDarkMode = () => {
     if (isDarkMode) {
       bodyClass.replace("light", "dark");
-      localStorage.setItem("isDarkMode", true);
+      localStorage.setItem("isDarkMode", "true");
     } else if (!isDarkMode) {
       bodyClass.replace("dark", "light");
-      localStorage.setItem("isDarkMode", false);
+      localStorage.setItem("isDarkMode", "false");
     }
   };
   const handleMobileMenuClick = () => {
@@ -70,7 +70,7 @@ const Header = () => {
           onClick={(e) => {
             setIsDarkMode(!isDarkMode);
             e.preventDefault();
-            toggleDarkMode(e);
+            toggleDarkMode();
           }}
         >
           <FontAwesomeIcon
