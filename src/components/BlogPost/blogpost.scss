@@ -13,21 +13,11 @@
     max-width: 19vw;
   }
   .blog-post-content {
-    padding: 2rem;
+    padding: 1rem;
   }
   h6 {
     padding-inline-start: 0;
   }
-  &:hover {
-    border: solid 1px var(--font-color-alt);
-    margin-top: calc(1rem - 3px);
-    margin-bottom: calc(1rem + 3px);
-    transition: all 0.2s ease;
-  }
-  &:hover > .blog-post-title {
-    text-decoration: underline;
-  }
-
   .blog-post-image {
     height: auto;
     max-height: 200px;
@@ -36,5 +26,17 @@
   }
   .blog-post-details {
     color: var(--font-color);
+  }
+  &:hover {
+    border: solid 1px var(--font-color-alt);
+    margin-top: calc(1rem - 3px);
+    margin-bottom: calc(1rem + 3px);
+    transition: all 0.2s ease;
+    .blog-post-content > .blog-post-title {
+      text-decoration: underline;
+    }
+    .blog-post-content > .read-more-link {
+      color: #4284fb;
+    }
   }
 }

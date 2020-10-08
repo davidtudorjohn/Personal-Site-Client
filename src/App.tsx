@@ -5,6 +5,7 @@ import CoursesPage from "./components/CoursesPage";
 import Login from "./components/Login";
 import BlogPage from "./components/BlogPage/index";
 import ScrollToTop from "./components/ScrollToTop";
+import BlogPostPage from "./components/BlogPostPage";
 function App() {
   return (
     <div className="App">
@@ -12,9 +13,10 @@ function App() {
         <ScrollToTop />
         <Header />
         <Switch>
-          <Route path="/courses" component={CoursesPage} />
-          <Route path="/blog" component={BlogPage} />
-          <Route path="/login" component={Login} />
+          <Route exact path="/courses" component={CoursesPage} />
+          <Route exact path="/blog" component={BlogPage} />
+          <Route exact path="/blog/posts/:id" component={BlogPostPage} />
+          <Route exact path="/login" component={Login} />
         </Switch>
       </Router>
     </div>
