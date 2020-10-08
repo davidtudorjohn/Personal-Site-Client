@@ -1,13 +1,17 @@
+:root {
+  font-size: 16px;
+}
+
 .light {
   --bg-color: #fdfdfd;
   --bg-color-alt: #ececec;
   --font-color: #404040;
   --font-color-alt: #cccccc;
-  --shadow: var(--font-color) 0rem 0.0033rem 0.99rem 0rem;
-  -webkit-transition: color 0.33s ease;
-  transition: color 0.33s ease;
-  -webkit-transition: background-color 0.33s ease;
-  transition: background-color 0.33s ease;
+  --shadow: var(--font-color) 0rem 0.13rem 0.99rem 0rem;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .dark {
@@ -16,10 +20,22 @@
   --font-color: #fdfdfd;
   --font-color-alt: #838383;
   --shadow: var(--font-color) 0rem 0.0033rem 0.99rem 0rem;
-  -webkit-transition: color 0.33s ease;
-  transition: color 0.33s ease;
-  -webkit-transition: background-color 0.33s ease;
-  transition: background-color 0.33s ease;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--font-color-alt);
 }
 
 :root {
@@ -37,6 +53,11 @@
   font-weight: 700;
   letter-spacing: -0.033rem;
   color: var(--font-color);
+  font-size: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+  color: slateblue;
 }
 
 body {
@@ -140,6 +161,7 @@ header #header-btn-section {
 
 header #header-btn-section #theme-btn,
 header #header-btn-section #mobile-menu-btn {
+  --icon-bg-size: calc(4rem * 0.5);
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -150,14 +172,13 @@ header #header-btn-section #mobile-menu-btn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  --icon-bg-size: calc(4rem * 0.8);
   background-color: var(--font-color-alt);
-  height: --icon-bg-size;
-  width: --icon-bg-size;
-  min-width: --icon-bg-size;
-  min-height: --icon-bg-size;
-  max-width: --icon-bg-size;
-  max-height: --icon-bg-size;
+  height: var(--icon-bg-size);
+  width: var(--icon-bg-size);
+  min-width: var(--icon-bg-size);
+  min-height: var(--icon-bg-size);
+  max-width: var(--icon-bg-size);
+  max-height: var(--icon-bg-size);
   border-radius: 50%;
   padding: 0.45rem;
 }
@@ -178,7 +199,8 @@ header #mobile-menu-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 350px;
+  width: 100vw;
+  max-width: 100vw;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -191,11 +213,18 @@ header #mobile-menu-content {
           align-items: center;
   position: absolute;
   top: calc(var(--header-height) - 2px);
-  right: 7vw;
+  right: 0;
   background-color: var(--bg-color);
   border-radius: 0.11em;
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  header #mobile-menu-content {
+    width: 350px;
+    right: 7vw;
+  }
 }
 
 @media (min-width: 1024px) {

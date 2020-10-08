@@ -43,7 +43,11 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <NavLink activeClassName="active-nav-link" to="/">
+        <NavLink
+          activeClassName="active-nav-link"
+          to="/"
+          onClick={handleMobileMenuClick}
+        >
           <h1 id="logo">David Tudor John</h1>
         </NavLink>
         {/* <form id="header-search-form">
@@ -89,18 +93,21 @@ const Header = () => {
             <MobileNavItem
               path="/portfolio"
               label="Portfolio"
+              description="Check out some really awesome software projects using state-of-the-art technologies!"
               icon={faFileAlt}
               click={handleMobileMenuClick}
             />
             <MobileNavItem
               path="/blog"
               label="Blog"
+              description="Read some world-class content about startups, technology, innovation, and more!"
               icon={faCoffee}
               click={handleMobileMenuClick}
             />
             <MobileNavItem
               path="/login"
               label="Login"
+              description="Login to access exclusive content for members only!"
               icon={faSignInAlt}
               click={handleMobileMenuClick}
             />

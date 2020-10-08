@@ -1,17 +1,29 @@
+@import "../../main";
 #login-form {
   display: flex;
   flex-direction: column;
   position: absolute;
   margin-top: 2rem;
   padding: 2rem;
-  max-width: 500px;
-  min-width: 350px;
+  max-width: 86vw;
+  min-width: calc(86vw - 4rem);
   max-height: 300px;
   min-height: 300px;
   justify-content: space-evenly;
   align-items: center;
   border: solid 1px #ccc;
-
+  @include tablet {
+    max-width: 500px;
+    min-width: 350px;
+    max-height: 300px;
+    min-height: 300px;
+  }
+  @include desktop {
+    max-width: 500px;
+    min-width: 350px;
+    max-height: 300px;
+    min-height: 300px;
+  }
   input {
     padding: 0.66rem 0.22rem;
     background: transparent;

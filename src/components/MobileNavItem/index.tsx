@@ -6,6 +6,7 @@ interface Props {
   icon: any;
   label: string;
   path: string;
+  description: string;
   click?: any;
 }
 const MobileNavItem = (props: Props) => {
@@ -16,12 +17,12 @@ const MobileNavItem = (props: Props) => {
         activeClassName="active-nav-link"
         to={`${props.path}`}
       >
-        <section className="mobile-nav-item-left">
+        <button className="mobile-nav-item-left">
           <FontAwesomeIcon className="fa-icon" icon={props.icon} />
-        </section>
+        </button>
         <section className="mobile-nav-item-right">
           <h3>{props.label}</h3>
-          <p>Some description about where the menu item will take you.</p>
+          <p>{props.description}</p>
         </section>
       </NavLink>
     </li>

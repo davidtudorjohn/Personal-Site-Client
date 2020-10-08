@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  width: 100%;
   &:hover {
     background-color: var(--bg-color-alt);
     transition: background-color 0.33s ease;
@@ -12,7 +13,7 @@
   .mobile-nav-item-content {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     p {
       font-size: 0.8rem;
@@ -20,9 +21,10 @@
     }
   }
   .mobile-nav-item-left {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    @include iconCircle;
   }
   .mobile-nav-item-right {
     text-align: left;
@@ -31,22 +33,14 @@
   }
   .fa-icon {
     color: var(--font-color);
-    @include iconCircle;
   }
-  // .icon-background {
-  //   background-color: #ddd;
-  //   padding: 0.44rem;
-  //   width: 2.33rem;
-  //   max-width: 2.33rem;
-  //   min-width: 2.33rem;
-  //   height: 2.33rem;
-  //   max-height: 2.33rem;
-  //   min-height: 2.33rem;
-  //   border-radius: 100%;
-  // }
-  .active-nav-link,
-  .active-nav-link > .fa-icon {
-    color: #4284fb;
+  .mobile-nav-item-content {
+    width: 100%;
+  }
+
+  .active-nav-link {
+    // color: #4284fb;
+    background-color: var(--bg-color-alt);
   }
   a {
     min-height: 1rem;

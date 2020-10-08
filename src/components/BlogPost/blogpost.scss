@@ -1,0 +1,35 @@
+@import "../../main";
+.blog-post {
+  padding: 2rem;
+  margin: 1rem 0rem;
+  border: solid 1px var(--bg-color-alt);
+  border-radius: 0.11rem;
+  max-width: 86vw;
+  @include tablet {
+    margin: 1rem;
+    max-width: 24vw;
+  }
+  @include desktop {
+    margin: 1rem;
+    max-width: 20vw;
+  }
+  h6 {
+    padding-inline-start: 0;
+  }
+  &:hover {
+    border: solid 1px var(--font-color-alt);
+    margin-top: calc(1rem - 3px);
+    margin-bottom: calc(1rem + 3px);
+    transition: all 0.2s ease;
+  }
+  &:hover > .blog-post-title {
+    text-decoration: underline;
+  }
+
+  .blog-post-image {
+    max-height: 20vh;
+  }
+  .blog-post-details {
+    color: var(--font-color);
+  }
+}

@@ -1,3 +1,43 @@
+:root {
+  font-size: 16px;
+}
+
+.light {
+  --bg-color: #fdfdfd;
+  --bg-color-alt: #ececec;
+  --font-color: #404040;
+  --font-color-alt: #cccccc;
+  --shadow: var(--font-color) 0rem 0.13rem 0.99rem 0rem;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.dark {
+  --bg-color: #404040;
+  --bg-color-alt: #505050;
+  --font-color: #fdfdfd;
+  --font-color-alt: #838383;
+  --shadow: var(--font-color) 0rem 0.0033rem 0.99rem 0rem;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--font-color-alt);
+}
+
 .nav-item {
   font-family: Helvetica;
   display: -webkit-box;
@@ -10,43 +50,19 @@
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  padding-left: 0.33rem;
+}
+
+.nav-item a {
+  padding: 0rem 0.33rem;
 }
 
 .nav-item .fa-icon {
   color: var(--font-color);
 }
 
-.nav-item .icon-background {
-  background-color: #ddd;
-  padding: 0.44rem;
-  width: 2.33rem;
-  max-width: 2.33rem;
-  min-width: 2.33rem;
-  height: 2.33rem;
-  max-height: 2.33rem;
-  min-height: 2.33rem;
-  border-radius: 100%;
-}
-
 .nav-item .active-nav-link,
 .nav-item .active-nav-link > .fa-icon {
   color: #4284fb;
-}
-
-.nav-item a {
-  min-height: 1rem;
-  padding: 0.33rem 0.99rem;
-  color: var(--font-color);
-  font-weight: 700;
-  font-size: 0.88rem;
-  border-bottom: solid 2px transparent;
-  border-radius: 0.11rem;
-}
-
-.nav-item a:hover,
-.nav-item a:hover > .fa-icon {
-  color: #1f6bfa;
-  -webkit-transition: all 0.33s ease;
-  transition: all 0.33s ease;
 }
 /*# sourceMappingURL=navitem.css.map */

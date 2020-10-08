@@ -1,13 +1,17 @@
+:root {
+  font-size: 16px;
+}
+
 .light {
   --bg-color: #fdfdfd;
   --bg-color-alt: #ececec;
   --font-color: #404040;
   --font-color-alt: #cccccc;
-  --shadow: var(--font-color) 0rem 0.0033rem 0.99rem 0rem;
-  -webkit-transition: color 0.33s ease;
-  transition: color 0.33s ease;
-  -webkit-transition: background-color 0.33s ease;
-  transition: background-color 0.33s ease;
+  --shadow: var(--font-color) 0rem 0.13rem 0.99rem 0rem;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .dark {
@@ -16,10 +20,22 @@
   --font-color: #fdfdfd;
   --font-color-alt: #838383;
   --shadow: var(--font-color) 0rem 0.0033rem 0.99rem 0rem;
-  -webkit-transition: color 0.33s ease;
-  transition: color 0.33s ease;
-  -webkit-transition: background-color 0.33s ease;
-  transition: background-color 0.33s ease;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--font-color-alt);
 }
 
 .mobile-nav-item {
@@ -34,6 +50,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  width: 100%;
 }
 
 .mobile-nav-item:hover {
@@ -50,8 +67,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -63,25 +81,7 @@
 }
 
 .mobile-nav-item .mobile-nav-item-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.mobile-nav-item .mobile-nav-item-right {
-  text-align: left;
-  padding-left: 0.66rem;
-  display: block;
-}
-
-.mobile-nav-item .fa-icon {
-  color: var(--font-color);
+  --icon-bg-size: calc(4rem * 0.5);
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,21 +92,33 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  --icon-bg-size: calc(4rem * 0.8);
   background-color: var(--font-color-alt);
-  height: --icon-bg-size;
-  width: --icon-bg-size;
-  min-width: --icon-bg-size;
-  min-height: --icon-bg-size;
-  max-width: --icon-bg-size;
-  max-height: --icon-bg-size;
+  height: var(--icon-bg-size);
+  width: var(--icon-bg-size);
+  min-width: var(--icon-bg-size);
+  min-height: var(--icon-bg-size);
+  max-width: var(--icon-bg-size);
+  max-height: var(--icon-bg-size);
   border-radius: 50%;
   padding: 0.45rem;
 }
 
-.mobile-nav-item .active-nav-link,
-.mobile-nav-item .active-nav-link > .fa-icon {
-  color: #4284fb;
+.mobile-nav-item .mobile-nav-item-right {
+  text-align: left;
+  padding-left: 0.66rem;
+  display: block;
+}
+
+.mobile-nav-item .fa-icon {
+  color: var(--font-color);
+}
+
+.mobile-nav-item .mobile-nav-item-content {
+  width: 100%;
+}
+
+.mobile-nav-item .active-nav-link {
+  background-color: var(--bg-color-alt);
 }
 
 .mobile-nav-item a {

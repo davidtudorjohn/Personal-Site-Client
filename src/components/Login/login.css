@@ -1,3 +1,43 @@
+:root {
+  font-size: 16px;
+}
+
+.light {
+  --bg-color: #fdfdfd;
+  --bg-color-alt: #ececec;
+  --font-color: #404040;
+  --font-color-alt: #cccccc;
+  --shadow: var(--font-color) 0rem 0.13rem 0.99rem 0rem;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.dark {
+  --bg-color: #404040;
+  --bg-color-alt: #505050;
+  --font-color: #fdfdfd;
+  --font-color-alt: #838383;
+  --shadow: var(--font-color) 0rem 0.0033rem 0.99rem 0rem;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--font-color-alt);
+}
+
 #login-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9,8 +49,8 @@
   position: absolute;
   margin-top: 2rem;
   padding: 2rem;
-  max-width: 500px;
-  min-width: 350px;
+  max-width: 86vw;
+  min-width: calc(86vw - 4rem);
   max-height: 300px;
   min-height: 300px;
   -webkit-box-pack: space-evenly;
@@ -20,6 +60,24 @@
       -ms-flex-align: center;
           align-items: center;
   border: solid 1px #ccc;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #login-form {
+    max-width: 500px;
+    min-width: 350px;
+    max-height: 300px;
+    min-height: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #login-form {
+    max-width: 500px;
+    min-width: 350px;
+    max-height: 300px;
+    min-height: 300px;
+  }
 }
 
 #login-form input {
