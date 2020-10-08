@@ -122,13 +122,25 @@ header {
       height: 100%;
       padding: 0;
 
-      .nav-item {
-        justify-content: left;
-        &:hover {
-          background-color: var(--bg-color-alt);
-        }
-        width: 100%;
-      }
+      //   .mobile-nav-item {
+      //     justify-content: left;
+      //     &:hover {
+      //       background-color: var(--bg-color-alt);
+      //     }
+      //     &:hover > .mobile-nav-item-content > .mobile-nav-item-left > .fa-icon {
+      //       color: #4284fb;
+      //     }
+      //     width: 100%;
+      //   }
+      //   .active-nav-link {
+      //     color: var(--font-color);
+      //   }
+      //   .active-nav-link > .mobile-nav-item-left {
+      //     // filter: brightness(110%);
+      //   }
+      //   .active-nav-link > .mobile-nav-item-left > .fa-icon {
+      //     color: #4284fb;
+      //   }
     }
     #mobile-nav-list > a {
       text-align: left;

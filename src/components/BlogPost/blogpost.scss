@@ -11,7 +11,7 @@
   }
   @include desktop {
     margin: 1rem;
-    max-width: 20vw;
+    max-width: 19vw;
   }
   h6 {
     padding-inline-start: 0;
@@ -27,7 +27,10 @@
   }
 
   .blog-post-image {
-    max-height: 20vh;
+    height: auto;
+    max-height: 200px;
+    // object-fit: cover;
+    width: 100%;
   }
   .blog-post-details {
     color: var(--font-color);

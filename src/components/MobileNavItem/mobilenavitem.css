@@ -1,5 +1,6 @@
 :root {
   font-size: 16px;
+  --font-white: #fdfdfd;
 }
 
 .light {
@@ -27,7 +28,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
@@ -57,6 +58,10 @@
   background-color: var(--bg-color-alt);
   -webkit-transition: background-color 0.33s ease;
   transition: background-color 0.33s ease;
+}
+
+.mobile-nav-item:hover > .mobile-nav-item-content > .mobile-nav-item-left > .fa-icon {
+  color: #4284fb;
 }
 
 .mobile-nav-item .mobile-nav-item-content {
@@ -92,7 +97,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--font-color-alt);
+  background: var(--font-color-alt);
   height: var(--icon-bg-size);
   width: var(--icon-bg-size);
   min-width: var(--icon-bg-size);
@@ -117,6 +122,10 @@
   width: 100%;
 }
 
+.mobile-nav-item .active-nav-link > .mobile-nav-item-left > .fa-icon {
+  color: #4284fb;
+}
+
 .mobile-nav-item .active-nav-link {
   background-color: var(--bg-color-alt);
 }
@@ -129,12 +138,5 @@
   font-size: 0.88rem;
   border-bottom: solid 2px transparent;
   border-radius: 0.11rem;
-}
-
-.mobile-nav-item a:hover,
-.mobile-nav-item a:hover > .fa-icon {
-  color: #1f6bfa;
-  -webkit-transition: all 0.33s ease;
-  transition: all 0.33s ease;
 }
 /*# sourceMappingURL=mobilenavitem.css.map */

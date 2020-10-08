@@ -58,7 +58,7 @@ const Header = () => {
         </form> */}
         <HeaderSearchForm icon={<FontAwesomeIcon icon={faSearch} />} />
         <ul id="nav-list">
-          <NavItem path="/portfolio" label="Portfolio" icon={faFileAlt} />
+          <NavItem path="/courses" label="Courses" icon={faFileAlt} />
           <NavItem path="/blog" label="Blog" icon={faCoffee} />
           <NavItem path="/login" label="Login" icon={faSignInAlt} />
         </ul>
@@ -91,9 +91,9 @@ const Header = () => {
         <section id="mobile-menu-content">
           <ul id="mobile-nav-list">
             <MobileNavItem
-              path="/portfolio"
-              label="Portfolio"
-              description="Check out some really awesome software projects using state-of-the-art technologies!"
+              path="/courses"
+              label="Courses"
+              description="Check out some really awesome courses to learn state-of-the-art technologies!"
               icon={faFileAlt}
               click={handleMobileMenuClick}
             />

@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-import PortfolioPage from "./components/PortfolioPage";
+import CoursesPage from "./components/CoursesPage";
 import Login from "./components/Login";
 import BlogPage from "./components/BlogPage/index";
 import ScrollToTop from "./components/ScrollToTop";
@@ -12,7 +12,7 @@ function App() {
         <ScrollToTop />
         <Header />
         <Switch>
-          <Route path="/portfolio" component={PortfolioPage} />
+          <Route path="/courses" component={CoursesPage} />
           <Route path="/blog" component={BlogPage} />
           <Route path="/login" component={Login} />
         </Switch>

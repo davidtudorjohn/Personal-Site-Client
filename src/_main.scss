@@ -1,5 +1,6 @@
 :root {
   font-size: 16px;
+  --font-white: #fdfdfd;
 }
 $tablet-width: 768px;
 $desktop-width: 1024px;
@@ -20,7 +21,7 @@ $desktop-width: 1024px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--font-color-alt);
+  background: var(--font-color-alt);
   height: var(--icon-bg-size);
   width: var(--icon-bg-size);
   min-width: var(--icon-bg-size);
@@ -29,6 +30,16 @@ $desktop-width: 1024px;
   max-height: var(--icon-bg-size);
   border-radius: 50%;
   padding: 0.45rem;
+  // &:hover,
+  // &:focus {
+  //   background: linear-gradient(160deg, #4284fb, slateblue);
+  // }
+  // &:hover > * {
+  //   color: var(--font-white);
+  // }
+  // &:focus > * {
+  //   color: var(--font-white);
+  // }
 }
 .light {
   --bg-color: #fdfdfd;
@@ -52,7 +63,7 @@ $desktop-width: 1024px;
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 12px;
 }
 ::-webkit-scrollbar-track {
   background: var(--bg-color-alt);

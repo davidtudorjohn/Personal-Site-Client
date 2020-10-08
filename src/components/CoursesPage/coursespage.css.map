@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "AAAA,AAAA,eAAe,CAAC;EACd,UAAU,EAAE,IAAI;CACjB",
     "sources": [
-        "portfoliopage.scss"
+        "coursespage.scss"
     ],
     "names": [],
-    "file": "portfoliopage.css"
+    "file": "coursespage.css"
 }

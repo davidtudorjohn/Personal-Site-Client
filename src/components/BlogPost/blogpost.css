@@ -1,5 +1,6 @@
 :root {
   font-size: 16px;
+  --font-white: #fdfdfd;
 }
 
 .light {
@@ -27,7 +28,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
@@ -56,7 +57,7 @@
 @media (min-width: 1024px) {
   .blog-post {
     margin: 1rem;
-    max-width: 20vw;
+    max-width: 19vw;
   }
 }
 
@@ -78,7 +79,9 @@
 }
 
 .blog-post .blog-post-image {
-  max-height: 20vh;
+  height: auto;
+  max-height: 200px;
+  width: 100%;
 }
 
 .blog-post .blog-post-details {

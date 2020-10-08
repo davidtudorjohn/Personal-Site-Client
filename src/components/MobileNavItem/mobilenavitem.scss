@@ -10,6 +10,10 @@
     background-color: var(--bg-color-alt);
     transition: background-color 0.33s ease;
   }
+  &:hover > .mobile-nav-item-content > .mobile-nav-item-left > .fa-icon {
+    color: #4284fb;
+  }
+
   .mobile-nav-item-content {
     display: flex;
     flex-direction: row;
@@ -37,7 +41,9 @@
   .mobile-nav-item-content {
     width: 100%;
   }
-
+  .active-nav-link > .mobile-nav-item-left > .fa-icon {
+    color: #4284fb;
+  }
   .active-nav-link {
     // color: #4284fb;
     background-color: var(--bg-color-alt);
@@ -50,10 +56,10 @@
     font-size: 0.88rem;
     border-bottom: solid 2px transparent;
     border-radius: 0.11rem;
-    &:hover,
-    &:hover > .fa-icon {
-      color: #1f6bfa;
-      transition: all 0.33s ease;
-    }
+    // &:hover,
+    // &:hover > .fa-icon {
+    //   color: #1f6bfa;
+    //   transition: all 0.33s ease;
+    // }
   }
 }
